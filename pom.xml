@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com.alura</groupId>
+  <artifactId>curso-jdbc-alura</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>curso-jdbc-alura</name>
+  <description>curso-jdbc-alura</description>
+  
+  <dependencies> 
+  	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.27</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
+	<dependency>
+	    <groupId>c3p0</groupId>
+	    <artifactId>c3p0</artifactId>
+	    <version>0.9.1.2</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.mchange/mchange-commons-java -->
+	<dependency>
+	    <groupId>com.mchange</groupId>
+	    <artifactId>mchange-commons-java</artifactId>
+	    <version>0.2.20</version>
+	</dependency>	
+
+  </dependencies>
+  
+  
+  
+  <build>
+    <pluginManagement>
+        <plugins>
+            <!-- Ignore/Execute plugin execution -->
+            <!-- this is to eliminate eclipse import errors -->
+            <plugin>
+                <groupId>org.eclipse.m2e</groupId>
+                <artifactId>lifecycle-mapping</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <lifecycleMappingMetadata>
+                        <pluginExecutions>
+                        <!-- copy-dependency plugin -->
+                            <pluginExecution>
+                                <pluginExecutionFilter>
+                                    <groupId>org.apache.maven.plugins</groupId>
+                                    <artifactId>maven-resources-plugin</artifactId>
+                                    <versionRange>[2.4.3,)</versionRange>
+                                    <goals>
+                                        <goal>resources</goal>
+                                        <goal>testResources</goal>
+                                    </goals>
+                                </pluginExecutionFilter>
+                                <action>
+                                    <ignore />
+                                </action>
+                            </pluginExecution>
+                        </pluginExecutions>
+                    </lifecycleMappingMetadata>
+                </configuration>
+             </plugin>
+        </plugins>
+    </pluginManagement>
+</build>
+
+  
+  
+</project>
