@@ -12,7 +12,7 @@ public class PoolConexoes {
 	
 	static {
 		
-		System.out.println("Instanciando propriedades est√°ticas de PoolConexoes");
+		System.out.println("Instanciando propriedades est·ticas de PoolConexoes");
 		
 		ComboPooledDataSource comboPooledDS = new ComboPooledDataSource();
 		comboPooledDS.setJdbcUrl("jdbc:mysql://localhost/loja-virtual-repository?useTimezone=true&serverTimezone=UTC");

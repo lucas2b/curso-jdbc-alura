@@ -18,7 +18,7 @@ public class ListaItensSimples {
 		while(rs.next()) {
 			System.out.println("ID: " + rs.getString(1));
 			System.out.println("Nome: " + rs.getString(2));
-			System.out.println("DescriÃ§Ã£o: " + rs.getString(3));
+			System.out.println("Descrição: " + rs.getString(3));
 		}
 		
 		conn.close();
